@@ -3,7 +3,7 @@ package com.pluralsight;
 public class CellPhone {
 
     //Defining variables for the cellphone data or properties
-    private int SerialNumber;
+    private int serialNumber;
     private String model;
     private String carrier;
     private String phoneNumber;
@@ -13,7 +13,7 @@ public class CellPhone {
     // Creating the constructor operator
     public CellPhone() {
 
-        this.SerialNumber = 0;
+        this.serialNumber = 0;
         this.model = "";
         this.carrier = "";
         this.phoneNumber = "";
@@ -25,24 +25,45 @@ public class CellPhone {
 //Creating or adding getters that will get data from the parameter constructor
 
     public int getSerialNumber() {
-        return SerialNumber;
+        return serialNumber;
 
     }
 
-    public String getmodel() {
+    public void setSerialNumber(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public String getModel() {
         return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public String getCarrier() {
         return carrier;
     }
 
+    public void setCarrier(String carrier) {
+            this.carrier = carrier;
+    }
+
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public String getowner() {
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getOwner() {
         return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
 
