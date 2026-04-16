@@ -2,6 +2,12 @@ package com.pluralsight;
 
 public class CellPhone {
 
+
+    //Adding a method 'dial' that will allow the user to see who is calling their phone and their phone number
+    public void dial(String phoneNumber){
+        System.out.println(owner + "'s phone is calling " + phoneNumber);
+    }
+
     //Defining variables for the cellphone data or properties
     private int serialNumber;
     private String model;

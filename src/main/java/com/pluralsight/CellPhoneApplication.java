@@ -7,8 +7,8 @@ public class CellPhoneApplication {
 
         // Now that I have setted the cellphone parametters, I can create the object which is the cellphone
 
-        CellPhone phone = new CellPhone(); // This will allow the object to be built from memory
-
+        CellPhone phone = new CellPhone();// This will allow the object to be built from memory
+        CellPhone phone2 = new CellPhone(); // Created a second phone
         // Prompting the user for the serial number
 
         System.out.print("What is the serial number? ");
@@ -40,22 +40,53 @@ public class CellPhoneApplication {
         String owner = scanner.nextLine();
         phone.setOwner(owner);
 
+        //Setting up phone 2
+
+        phone2.setSerialNumber(2);
+        phone2.setModel("iPhone");
+        phone2.setCarrier("Verizon");
+        phone2.setPhoneNumber("855-555-2222");
+        phone2.setOwner("Mubarak");
+
+
 
         //Now, that we have collected al informations from the user we can display the phone info using getters
 
-        System.out.println("\n--- Phone Info ---");
+//        System.out.println("\n--- Phone Info ---");
+//        System.out.println("Serial Number: " + phone.getSerialNumber());
+//        System.out.println("Model: " + phone.getModel());
+//        System.out.println("Carrier: " + phone.getCarrier());
+//        System.out.println("Phone Number: " + phone.getPhoneNumber());
+//        System.out.println("owner: " + phone.getOwner());
+
+
+        //Displaying both phones
+        display(phone);
+        display(phone2);
+
+        //Dialing
+        phone.dial(phone2.getPhoneNumber());
+        phone2.dial(phone.getPhoneNumber());
+
+
+
+
+
+
+
+
+    }
+
+
+
+    //Created a method that allows the display of the callers' info
+    public static void display(CellPhone phone) {
         System.out.println("Serial Number: " + phone.getSerialNumber());
         System.out.println("Model: " + phone.getModel());
         System.out.println("Carrier: " + phone.getCarrier());
         System.out.println("Phone Number: " + phone.getPhoneNumber());
         System.out.println("Owner: " + phone.getOwner());
-
-
-
-
-
-
-
+        System.out.println("------------------------");
     }
 
 }
