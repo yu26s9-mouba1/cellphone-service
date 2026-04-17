@@ -28,6 +28,17 @@ public class CellPhone {
 
     }
 
+    //Creating the phonein one line instead of using setters (Modified version)
+
+    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+
+
 //Creating or adding getters that will get data from the parameter constructor
 
     public int getSerialNumber() {

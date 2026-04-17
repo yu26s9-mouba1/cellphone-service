@@ -9,6 +9,11 @@ public class CellPhoneApplication {
 
         CellPhone phone = new CellPhone();// This will allow the object to be built from memory
         CellPhone phone2 = new CellPhone(); // Created a second phone
+
+        //Creating cellphone 3 as a new object
+        CellPhone phone3 = new CellPhone(3, "Samsung", "T-Mobile", "999-555-1111", "Moubarak");
+
+
         // Prompting the user for the serial number
 
         System.out.print("What is the serial number? ");
@@ -63,10 +68,12 @@ public class CellPhoneApplication {
         //Displaying both phones
         display(phone);
         display(phone2);
+        display(phone3); // Added another phone
 
         //Dialing
         phone.dial(phone2.getPhoneNumber());
         phone2.dial(phone.getPhoneNumber());
+        phone.dial(phone3.getPhoneNumber());
 
 
 
